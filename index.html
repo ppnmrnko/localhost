@@ -1,0 +1,45 @@
+<head>
+<h3>Просмотр базы данных</h3>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="libraries/js/jquery.min.js"></script>
+<script type="text/javascript" src="libraries/js/scripts.js"></script>
+<title> База данных </title>
+</head> 	
+
+<table>
+	<tr>
+		<td> Пользователь: </td>
+		<td>
+			<select id='LoginId'onChange="ChangeUser();">
+				<option value='1'>Администратор</option>
+				<option value='2'>Генерал</option>
+				<option value='3'>Солдат</option>
+			</select>
+		</td>
+	</tr>
+</table>
+
+<!-- Пострение таблицы -->
+<table>
+	<tr>
+		<td><button style="width: 300px;" onClick="showForm('form1.php');">Вывод списка всех служащих</button></td>
+		<td><button style="width: 300px;" onClick="showForm('form2.php');">Вывод списка офицерских составов</button></td>
+	</tr>
+	<tr>
+		<td><button style="width: 300px;" onClick="showForm('form3.php');">Вывод списка всех обладателей золотого значка ГТО</button></td>
+		<td><button style="width: 300px;" onClick="showForm('form4.php?nomer_voinsk_ch=1');">Вывод колличества вооружения в определённой части</button></td>
+	</tr>
+	<tr>
+		<td colspan='2'><button style="width: 604px;" onClick="showForm('form5.php?nv=1&rt=1');">Вывод колличества должностей</button></td>	<!-- nv-звание rt-войсковая часть -->
+	</tr>
+	<tr>
+		<td><button style="width: 300px;" onClick="showForm('form6.php');">Редактирование таблицы служащих</button></td>
+		<td><button style="width: 300px;" onClick="showForm('form7.php');">Редактирование таблицы вооружений</button></td>
+	</tr>
+	<tr>
+		<td colspan='2'><button style="width: 604px;" onClick="showForm('form8.php');">Просмотр аудита</button></td>
+	</tr>
+</table>
+
+<!-- Поле, на котором в дальнейшем будут отображаться таблицы -->
+<div id='FormId'></div>
